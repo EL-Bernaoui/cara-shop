@@ -271,10 +271,8 @@ header nav ul li a.active::after {
   header nav ul li {
     padding: 15px 0;
   }
-  header nav ul li a :last-child {
-    display: none;
-  }
-  header nav ul li a.active:last-child {
+  header nav ul li a :last-child,
+  header nav ul li a.sh-cart {
     display: none;
   }
   header nav ul i.close-btn {
@@ -743,6 +741,12 @@ footer {
   background-color: var(--bg-1);
   padding: var(---section-padding) 0 30px;
   color: var(--text-color-1);
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  footer {
+  padding-bottom: 20px;
+}
 }
 footer .container {
   display: flex;
@@ -750,7 +754,7 @@ footer .container {
   align-items: flex-start;
   flex-wrap: wrap;
   padding-bottom: 20px;
-  gap: 40px;
+  gap: 0 40px;
 }
 @media (max-width: 650px) {
   footer .container {
@@ -815,6 +819,11 @@ footer .copyright {
   color: var(--text-color-1);
   font-weight: 500;
   position: relative;
+}
+@media (max-width: 767px) {
+  footer .copyright {
+  padding-top: 20px;
+}
 }
 footer .copyright::before {
   content: "";
@@ -1085,6 +1094,7 @@ footer .copyright::before {
   .video h1 {
     font-size: 40px;
     line-height: 40px;
+    margin-top: 20px;
   }
 }
 /* ------------------------
@@ -1126,6 +1136,11 @@ footer .copyright::before {
 }
 .contact-info .box ul li i {
   color: var(--main-color-text);
+}
+@media (max-width: 767px) {
+  .contact-info .box ul li p {
+  font-size: 14px;
+}
 }
 .contact-info .box iframe {
   width: 100%;
